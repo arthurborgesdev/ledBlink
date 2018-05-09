@@ -11,6 +11,9 @@
     "led",
     "gojs"
   ],
+  dependencies: {
+    pi-pins: "*"
+  },
   "author": "Arthur Borges",
   "license": "MIT"
 }
