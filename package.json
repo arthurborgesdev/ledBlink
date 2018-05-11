@@ -12,7 +12,7 @@
     "gojs"
   ],
   "dependencies": {
-    "pi-pins": "*"
+    "pigpio": "^1.0.0"
   },
   "author": "Arthur Borges",
   "license": "MIT"
