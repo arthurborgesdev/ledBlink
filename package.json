@@ -16,7 +16,8 @@
     "gojs"
   ],
   "dependencies": {
-    "pigpio": "^1.0.0"
+    "pigpio": "^1.0.0",
+    "express": "*"
   },
   "author": "Arthur Borges",
   "license": "MIT"
