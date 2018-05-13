@@ -12,15 +12,18 @@ app.get('/botao', function (req, res) {
   console.log("Acessou a página do botão");
 });
 
-console.log("Hello World!");
+console.log("Hello Botao!");
 
-var Gpio = require('pigpio').Gpio;
-var led = new Gpio(47, { mode: Gpio.OUTPUT });
 var toggle = true;
+app.post('/botao/resultado', function(req, res) {
+  toggle = !toggle;
+  led.digitalWrite(toggle);
+})
 
+/*
 setInterval(function () {
   toggle = !toggle;
   led.digitalWrite(toggle);
 }, 1000);
-
+*/
 app.listen(80, () => console.log('Example app listening on port 80!'))

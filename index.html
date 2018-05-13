@@ -5,6 +5,19 @@
   </head>
   <body>
     <h1>Clica aqui</h1>
-     <button>Botão</button>
+    <button id="botao">Botão</button>
+    <h3 id="status">Status</h3>
   </body>
+  <script>
+
+    $("#botao").on("click", function(event) {
+      $.ajax({
+        url: "/botao/resultado",
+        method: "POST",
+        success: function(result) {
+          $("#status").html('<h3>' + result + '</h3>');
+        }
+      });
+    });
+  </script>
 </html>
