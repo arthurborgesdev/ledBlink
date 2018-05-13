@@ -21,7 +21,6 @@ app.post('/botao/resultado', function(req, res) {
   if (toggle == true) {
     value = "ACESO";
     toogle = true;
-    break;
   } else {
     value = "APAGADO";
   }
