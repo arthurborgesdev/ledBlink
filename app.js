@@ -19,12 +19,13 @@ var value;
 app.post('/botao/resultado', function(req, res) {
   led.digitalWrite(toggle);
   if (toggle == true) {
-    toggle = !toggle;
     value = "ACESO";
+    toogle = true;
+    break;
   } else {
-    toggle = !toggle;
     value = "APAGADO";
   }
+  toggle = !toggle;
   res.send(value);
 });
 
