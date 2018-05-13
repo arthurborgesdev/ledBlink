@@ -15,13 +15,14 @@ app.get('/botao', function (req, res) {
 console.log("Hello Botao!");
 
 var toggle = true;
-var value = true;
+var value;
 app.post('/botao/resultado', function(req, res) {
-  toggle = !toggle;
   led.digitalWrite(toggle);
   if (toggle == true) {
+    toggle = !toggle;
     value = "ACESO";
   } else {
+    toggle = !toggle;
     value = "APAGADO";
   }
   res.send(value);
