@@ -15,10 +15,17 @@ app.get('/botao', function (req, res) {
 console.log("Hello Botao!");
 
 var toggle = true;
+var value = true;
 app.post('/botao/resultado', function(req, res) {
   toggle = !toggle;
   led.digitalWrite(toggle);
-})
+  if (toggle == true) {
+    value = "ACESO";
+  } else {
+    value = "APAGADO";
+  }
+  res.send(value);
+});
 
 /*
 setInterval(function () {
